@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech Lead Conversion Prediction</title>
+    <link rel="stylesheet" href="../static/CSS/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lead Prediction</h1>
+        <form action="/predict" method="post">
+            <!-- Origin -->
+            <div>
+                <label for="Origin">Lead Origin:</label>
+                <select id="Origin" name="Origin" required>
+                    <option value="API">API</option>
+                    <option value="Landing Page Submission">Landing Page Submission</option>
+                    <option value="Lead Add Form">Lead Add Form</option>
+                    <option value="Lead Import">Lead Import</option>
+                    <option value="Quick Add Form">Quick Add Form</option>
+                </select>
+            </div>
+
+            <!-- Source -->
+            <div>
+                <label for="Source">Source:</label>
+                <select id="Source" name="Source" required>
+                    <option value="Direct Traffic">Direct Traffic</option>
+                    <option value="Online Chat">Online Chat</option>
+                    <option value="Referral Sites">Referral Sites</option>
+                    <option value="Search Source">Search Source</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Welingak Website">Welingak Website</option>
+                </select>
+            </div>
+
+            <!-- Do_not_Email -->
+            <div>
+                <label for="Do_not_Email">Do Not Email:</label>
+                <select id="Do_not_Email" name="Do_not_Email" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            
+            <!-- Total Visits -->
+            <div>
+                <label for="Total_Visits">Total Visits:</label>
+                <input type="number" id="Total_Visits" name="Total_Visits" required>
+            </div>
+            <div>
+                <label for="Free_copy">Free +copy:</label>
+                <select id="Free_copy" name="Free_copy" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <!-- Time Spend on Site -->
+            <div>
+                <label for="Time_spend_on_site">Time Spent on Site (in seconds):</label>
+                <input type="number" id="Time_spend_on_site" name="Time_spend_on_site" required>
+            </div>
+            
+            <!-- Page Viewed -->
+            <div>
+                <label for="Page_Viewed">Page Viewed:</label>
+                <input type="number" id="Page_Viewed" name="Page_Viewed" required>
+            </div>
+
+            <!-- Last Activity -->
+            <div>
+                <label for="LA">Last Activity:</label>
+                <select id="LA" name="LA" required>
+                    <option value="Converted to Lead">Converted to Lead</option>
+                    <option value="Email Opened">Email Opened</option>
+                    <option value="Form Submitted on Website">Form Submitted on Website</option>
+                    <option value="Had a Phone Conversation">Had a Phone Conversation</option>
+                    <option value="Olark Chat Conversation">Olark Chat Conversation</option>
+                    <option value="Page Visited on Website">Page Visited on Website</option>
+                    <option value="SMS Sent">SMS Sent</option>
+                    <option value="Unreachable">Unreachable</option>
+                </select>
+            </div>
+                    
+
+            <!-- Region -->
+            <div>
+                <label for="Region">Region:</label>
+                <select id="Region" name="Region" required>
+                    <option value="Africa">Africa</option>
+                    <option value="America">America</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Middle_East">Middle East</option>
+                </select>
+            </div>
+            
+            <!-- Job -->
+            <div>
+                <label for="Job">Job:</label>
+                <select id="Job" name="Job" required>
+                    <option value="Businessman">Businessman</option>
+                    <option value="Housewife">Housewife</option>
+                    <option value="Student">Student</option>
+                    <option value="Unemployed">Unemployed</option>
+                </select>
+            </div>
+            <button type="submit">Predict Lead Conversion</button>
+        </form>
+    </div>
+</body>
+</html>
